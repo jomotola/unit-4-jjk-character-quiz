@@ -1,0 +1,118 @@
+/* General body styling */
+
+.question, .card {
+    display: none;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Title section styling */
+
+.title {
+    background-color: #313451; 
+    border-radius: 8px;
+    padding: 3%;
+    text-align: center; /* Center align text content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title h1 {
+    text-align: center;
+    color: white;
+}
+
+.title img {
+    width: 75%; /* Adjust image width */
+    max-width: 100%; /* Ensure responsiveness */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Questions section styling */
+.question {
+    background-color: #e7a3a3;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center; /* Center align text content */
+}
+
+.questions {
+    display: flex;
+    flex-direction: column; /* Stack questions vertically */
+    align-items: center; /* Center align items horizontally */
+}
+
+.questions h4 {
+    color: white;
+}
+
+.questions img {
+    width: 60%; /* Make images responsive */
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    
+}
+
+.user-choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.button {
+    background-color: #dfeeee; /* Gold button background */
+    color: #000000; /* Black button text */
+    border-radius: 5px;
+    border-color: #dfeeee;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px; /* Adjust spacing between buttons */
+    width: 150px; /* Set a fixed width for consistent button size */
+}
+
+button:hover {
+    background-color: #83cbdf ; /* Orange-ish gold on hover */
+}
+
+/* Result section styling */
+
+.card {
+    width: 400px; /* Set width for each rd */
+    background-color: #7b6d8c;
+    border-radius: 8px;
+    overflow: hidden; /* Ensure contents do not overflow */
+    font-size: 19px;
+    text-align: center;
+    padding: 20px;
+    margin: auto; /* Center the card horizontally */
+    margin-bottom: 20px; /* Space between cards */
+}
+
+.card-body {
+    padding: 20px; /* Padding inside the card body */
+    text-align: center; /* Center align text content */
+}
+
+.card-title {
+    margin-top: 0; /* Remove top margin for title */
+    font-size: 1.5rem; /* Larger font size for title */
+}
+
+.card-text {
+    color: black; /* Dark gray text color */
+}
+
+.card-img-top {
+    width: 100%; /* Ensure image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px 8px 0 0; /* Rounded corners only on top */
+}
