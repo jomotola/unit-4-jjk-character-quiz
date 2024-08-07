@@ -1,128 +1,132 @@
-let titleScreen = document.querySelector(".title");
-let startButton = document.querySelector(".start");
+/// Declare variables below to save the different divs of your story.
+let firstScreen = document.querySelector(".enter-name");
 
-let nobaraAttributes = 0;
-let gojoAttributes = 0;
-let megumiAttributes = 0;
-let yujiAttributes = 0;
+let nameInput = document.querySelector(".name-input");
+let submitButton = document.querySelector('.name-submit');
 
-let questionOneDiv = document.querySelector('.one');
-let moneyButton = document.querySelector("#money");
-let protectButton = document.querySelector("#protect");
-let growButton = document.querySelector("#grow");
-let reformButton = document.querySelector("#reform");
+let welcomeScreen = document.querySelector(".welcome-screen");
+let welcomeTextOne = document.querySelector(".welcome");
+let welcomeTextTwo = document.querySelector(".title")
 
-let questionThreeDiv = document.querySelector('.three');
-let strongestButton = document.querySelector('#strongest');
-let leadingButton = document.querySelector('#leading');
-let unshakableButton = document.querySelector('#unshakable');
-let adaptingButton = document.querySelector('#adapting');
+let storyOpeningScreen = document.querySelector(".story-opening");
 
-let questionFourDiv = document.querySelector('.four');
-let shikigamiButton = document.querySelector('#shikigami');
-let fistsButton = document.querySelector('#fists');
-let hammerButton = document.querySelector('#hammer');
-let eyesButton = document.querySelector('#blue-eyes');
+let whiteRabbitButtons = document.querySelector(".white-rabbit-buttons");
+let addWhiteRabbitButtonOne = document.querySelector(".option-one");
+let addWhiteRabbitButtonTwo = document.querySelector(".option-two");
 
-let megumiResult = document.querySelector('.megumi');
-let gojoResult = document.querySelector('.gojo');
-let yujiResult = document.querySelector('.yuji');
-let nobaraResult = document.querySelector('.nobara');
+let optionOneScreen = document.querySelector(".option-one-screen");
+let rabbitHole = document.querySelector(".option-one-screen img");
+let fallingRabbitHole = document.querySelector(".falling-down-hole");
 
-startButton.addEventListener('click', function() {
-    titleScreen.style.display = "none";
-    questionOneDiv.style.display = "block";
+let optionTwoScreen = document.querySelector(".option-two-screen");
+
+let hallwayScreen = document.querySelector(".hallway-option-screen");
+let hallwayImage = document.querySelector(".hallway-option-screen img");
+
+let tableKeys = document.querySelector(".table-with-keys");
+let keysButtons = document.querySelector(".key-buttons");
+let keyOne = document.querySelector(".key-one");
+let keyTwo = document.querySelector(".key-two");
+
+let keyOneScreen = document.querySelector(".key-one-screen");
+let pleadCase = document.querySelector(".plead-case");
+
+let keyTwoScreen = document.querySelector(".key-two-screen");
+let leaveParty = document.querySelector(".forest-journey");
+
+let keyOneEnd = document.querySelector(".key-one-end");
+let keyTwoEnd = document.querySelector(".key-two-end");
+
+let finalEnding = document.querySelector(".final-ending");
+
+// When you're ready to make event handlers, uncomment the code below. 
+//  - Then fill in the blanks with the correct variables.
+ 
+function changeWelcomeScreen() { 
+    welcomeScreen.style.display = "none"; // Hide welcome screen
+    
+    storyOpeningScreen.style.display = "block"; // Display the story opening screen
+    whiteRabbitButtons.style.display = "block";
+}
+
+let username;
+submitButton.addEventListener('click', function(){
+    username = nameInput.value;
+    firstScreen.style.display = "none";
+    welcomeScreen.style.display="block";
+    welcomeTextOne.innerHTML = "Welcome, " + username + " to";
+    welcomeTextTwo.innerHTML = username + " in Wonderland";
+
+    storyOpeningScreen.style.top = "3%";
+    setTimeout(changeWelcomeScreen, 3000); // Change screens after 3000 milliseconds (3 seconds)
+});
+
+addWhiteRabbitButtonOne.addEventListener('click', function(){
+    storyOpeningScreen.style.display = "none";
+    whiteRabbitButtons.style.display = "none";
+    optionOneScreen.style.display = "block";
+});
+
+function changeRabbitHoleScreen() {
+    optionTwoScreen.style.display = "none";
+    fallingRabbitHole.style.display = "none";
+
+    hallwayScreen.style.display = "block";
+} 
+
+addWhiteRabbitButtonTwo.addEventListener('click', function() {
+    storyOpeningScreen.style.display = "none";
+    whiteRabbitButtons.style.display = "none";
+    optionTwoScreen.style.display = "block";
+    fallingRabbitHole.style.display = "block";
+
+    setTimeout(changeRabbitHoleScreen, 4000);
+});
+
+rabbitHole.addEventListener('click', function(){
+    optionOneScreen.style.display = "none";
+    fallingRabbitHole.style.display = "block";
+
+    fallingRabbitHole.style.top = "10%";
+
+    setTimeout(changeRabbitHoleScreen, 2000);
+});
+
+hallwayImage.addEventListener('click', function (){
+    hallwayScreen.style.display = "none"; 
+    tableKeys.style.display = "block";
+    keysButtons.style.display = "block";
 })
 
-function nobaraScore() {
-    nobaraAttributes += 1;
+function changeKeyEndingScreen() {
+    keyOneEnd.style.display = "none";
+    keyTwoEnd.style.display = "none";
+
+    finalEnding.style.display = "block";
 }
 
-function gojoScore() {
-    gojoAttributes += 1;
-}
+keyOne.addEventListener('click', function(){
+    tableKeys.style.display = "none";
+    keysButtons.style.display = "none";
+    keyOneScreen.style.display = "block";
+})
 
-function megumiScore() {
-    megumiAttributes += 1;
-}
+pleadCase.addEventListener('click', function(){
+    keyOneScreen.style.display = "none";
+    keyOneEnd.style.display = "block";
 
-function yujiScore(){
-    yujiAttributes += 1;
-}
-//First Question
-moneyButton.addEventListener('click', function() {
-    nobaraScore();
-    questionOneDiv.style.display = "none";
-    questionThreeDiv.style.display = "block";
-});
+    setTimeout(changeKeyEndingScreen, 3000);
+})
 
-protectButton.addEventListener('click', function() {
-    megumiScore();
-    questionOneDiv.style.display = "none";
-    questionThreeDiv.style.display = "block";
-});
+keyTwo.addEventListener('click', function(){
+    tableKeys.style.display = "none";
+    keysButtons.style.display = "none";
+    keyTwoScreen.style.display = "block";
+})
 
-growButton.addEventListener('click', function(){
-    yujiScore();
-    questionOneDiv.style.display = "none";
-    questionThreeDiv.style.display = "block";
-});
+leaveParty.addEventListener('click', function(){
+    keyTwoScreen.style.display = "none";
+    keyTwoEnd.style.display = "block";
 
-reformButton.addEventListener('click', function(){
-    yujiScore();
-    questionOneDiv.style.display = "none";
-    questionThreeDiv.style.display = "block";
-});
-
-//Third Question
-strongestButton.addEventListener('click', function(){
-    gojoScore();
-    questionThreeDiv.style.display = "none";
-    questionFourDiv.style.display = "block";
-});
-
-leadingButton.addEventListener('click', function(){
-    megumiScore();
-    questionThreeDiv.style.display = "none";
-    questionFourDiv.style.display = "block";
-});
-
-unshakableButton.addEventListener('click', function(){
-    yujiScore();
-    questionThreeDiv.style.display = "none";
-    questionFourDiv.style.display = "block";
-});
-
-adaptingButton.addEventListener('click', function(){
-    nobaraScore();
-    questionThreeDiv.style.display = "none";
-    questionFourDiv.style.display = "block";
-});
-//Fourth Question
-shikigamiButton.addEventListener('click', function(){
-    megumiScore();
-    questionFourDiv.style.display = "none";
-    megumiResult.style.display = "block";
-});
-
-fistsButton.addEventListener('click', function(){
-    yujiScore();
-    questionFourDiv.style.display = "none";
-    yujiResult.style.display = "block";
-});
-
-hammerButton.addEventListener('click', function(){
-    nobaraScore();
-    questionFourDiv.style.display = "none";
-    nobaraResult.style.display = "block";
-});
-
-eyesButton.addEventListener('click', function() {
-    gojoScore();
-    questionFourDiv.style.display = "none";
-    gojoResult.style.display ="block";
-});
-
-
-
-
+    setTimeout(changeKeyEndingScreen, 3000);
+})

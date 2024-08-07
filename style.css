@@ -1,118 +1,258 @@
-/* General body styling */
 
-.question, .card {
-    display: none;
+/* When someone enters your game, you only want them to see the opening and the option buttons. The code below will use the display property to hide certain parts of the story. Remove the comments from the code below when you're ready for that step!*/
+ .welcome-screen, .story-opening, .white-rabbit-buttons, .option-one-screen, .option-two-screen, .falling-down-hole, .hallway-option-screen,
+.table-with-keys,.key-buttons, .key-one-screen, .key-two-screen, .key-one-end, .key-two-end, .final-ending{
+   display:none;
 }
 
+
+
+/* Feel free to change any of the styling below!*/
+html,
 body {
-    font-family: 'Oswald', sans-serif;
-    background-color: white;
-    color: black;
-    line-height: 1.6;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Title section styling */
-
-.title {
-    background-color: #313451; 
-    border-radius: 8px;
-    padding: 3%;
-    text-align: center; /* Center align text content */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.title h1 {
+/* Style the body with a background color or image if desired */
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #ffdada;
     text-align: center;
-    color: white;
-}
-
-.title img {
-    width: 75%; /* Adjust image width */
-    max-width: 100%; /* Ensure responsiveness */
-    border-radius: 8px; /* Rounded corners */
-}
-
-/* Questions section styling */
-.question {
-    background-color: #e7a3a3;
-    margin: 20px;
     padding: 20px;
-    border-radius: 8px;
-    text-align: center; /* Center align text content */
 }
 
-.questions {
-    display: flex;
-    flex-direction: column; /* Stack questions vertically */
-    align-items: center; /* Center align items horizontally */
+.enter-name {
+    background-color: #f9ffda;
+    border: 1px solid #f9ffda;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    font-family: 'Source Code Pro', monospace;
+
+    position: absolute;
+    margin: auto;
+    padding: 10px;
+    top: 40%;
+    left: 30%;
+
 }
 
-.questions h4 {
-    color: white;
+.welcome-screen {
+    background-color: #f9ffda;
+    border: 1px solid #f9ffda;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    font-family: 'Source Code Pro', monospace;
+
+    position: absolute;
+    padding: 10px;
+    top: 20%;
+    left: 20%;
 }
 
-.questions img {
-    width: 60%; /* Make images responsive */
+.welcome-screen img {
+    width: 50%;
+}
+
+.welcome-screen h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.welcome-screen .title {
+    font-family: Lucida Handwriting, sans-serif;
+}
+
+/* Style the title of your story */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style the story opening container */
+.story-opening {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+
+    position: absolute;
+    margin: auto;
+    padding: 10px;
+    top: 10%;
+    left: 15%;
+
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* Style the story image */
+.story-opening img {
+    max-width: 70%;
     height: auto;
-    border-radius: 8px;
-    margin-top: 10px;
-    
+    margin-bottom: 10px;
 }
 
-.user-choices {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
+/* Style the story opening message */
+.story-opening h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
-.button {
-    background-color: #dfeeee; /* Gold button background */
-    color: #000000; /* Black button text */
-    border-radius: 5px;
-    border-color: #dfeeee;
+.white-rabbit-buttons {
+    font-family: 'Source Code Pro', monospace;
+    position: absolute;
+    top: 90%;
+    left: 37%;
+}
+
+/* Style the buttons container */
+.buttons {
+    margin: 20px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* Style the option buttons */
+button {
+    font-size: 16px;
     padding: 10px 20px;
+    margin: 10px;
+    background-color: #D7FEFF;
+    color: black;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    margin: 10px; /* Adjust spacing between buttons */
-    width: 150px; /* Set a fixed width for consistent button size */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #83cbdf ; /* Orange-ish gold on hover */
+    background-color: #0056b3;
 }
 
-/* Result section styling */
+.option-one-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-.card {
-    width: 400px; /* Set width for each rd */
-    background-color: #7b6d8c;
-    border-radius: 8px;
-    overflow: hidden; /* Ensure contents do not overflow */
-    font-size: 19px;
+.option-two-screen {
+    position: absolute;
+    left: 15%;
+    width:70%;
+}
+
+.falling-down-hole {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: fit-content;
+    
+}
+
+/*.falling-down-hole img {
+    height: 30%;
+    
+}*/
+
+.hallway-option-screen {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: fit-content;
+}
+
+.hallway-option-screen img {
+    width: 80%;
+}
+
+.table-with-keys {
+    position: absolute;
+    left: 13%;
+}
+
+.key-buttons {
     text-align: center;
+    position: absolute;
+    top: 85%;
+    left: 40%;
+}
+
+.key-one-screen {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+.key-one-end {
+    position: absolute;
+    left: 15%;
+}
+
+.key-two-screen {
+    position: absolute;
+    top: 7%;
+    left: 15%;
+}
+
+.key-two-end {
+    position: absolute;
+    left: 15%;
+}
+
+.final-ending {
+    background-color: #f9ffda;
+    border: 1px solid #f9ffda;
     padding: 20px;
-    margin: auto; /* Center the card horizontally */
-    margin-bottom: 20px; /* Space between cards */
+    border-radius: 10px;
+    width: 40%;
+    font-family: 'Source Code Pro', monospace;
+
+    position: absolute;
+    padding: 10px;
+    top: 20%;
+    left: 30%;
 }
 
-.card-body {
-    padding: 20px; /* Padding inside the card body */
-    text-align: center; /* Center align text content */
+.final-ending img {
+    width: 300px;
 }
 
-.card-title {
-    margin-top: 0; /* Remove top margin for title */
-    font-size: 1.5rem; /* Larger font size for title */
+/* Style the screens for option one and option two */
+.story-opening, .option-one-screen, .option-two-screen, .falling-down-hole, .hallway-option-screen,
+.table-with-keys, .key-one-screen, .key-two-screen, .key-one-end, .key-two-end {
+    background-color: #f9ffda;
+    border: 1px solid #f9ffda;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+
+    margin-bottom: 10px;
 }
 
-.card-text {
-    color: black; /* Dark gray text color */
+
+
+/* Style the images in the screens */
+.option-one-screen img,
+.option-two-screen img,
+.key-one-end img,
+.key-two-end img {
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-.card-img-top {
-    width: 100%; /* Ensure image fills the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px 8px 0 0; /* Rounded corners only on top */
+.key-one-screen img {
+    width: 400px;
+}
+
+/* Style the text in the screens */
+.option-one-screen h1,
+.option-two-screen h1,
+.key-one-end h1,
+.key-two-end h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
 }

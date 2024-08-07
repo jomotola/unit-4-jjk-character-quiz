@@ -1,74 +1,101 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>INT: Unit 4 Quiz Project</title>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
-        <script defer src="script.js"></script>
+        <title>Wonderland Adventure</title>
     </head>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    
     <body>
-        <div class="title">
-            <h1>What Jujutsu Kaisen Character Are You?!</h1>
-            <img src="https://p325k7wa.twic.pics/high/jujutsu-kaisen/jujutsu-kaisen-cursed-clash/00-page-setup/JJK-header-mobile2.jpg?twic=v1/resize=760/step=10/quality=80" id="opening-image">
-            <button class="start button">Start Quiz!</button>
+        <div class="enter-name">
+            <h1>What's Your Name?</h1>
+            <input class="name-input" type="text" placeholder="Enter name here">
+            <button class="name-submit">Submit</button>
         </div>
-        <div class="questions">
-            <div class="question one">
-                <h4>What is Your Motivation In Life</h4>
-                <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/05/10-best-jujutsu-kaisen-quotes-ranked.jpg">
-                <div class="user-choices">
-                    <button class="A button first" id="money">Money</button>
-                    <button class="B button first" id="protect">Protecting The Weak</button>
-                    <button class="C button first" id="grow">Grow Stronger</button>
-                    <button class="D button first" id="reform">Create a Different World</button>
-                </div>
-            </div>
-            <div class="question three">
-                <h4>What are you good at?</h4>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_xhKfmukidkOeDM0tSzUEvAl1RBP-KemUog&s">
-                <div class="user-choices">
-                    <button class="A button" id="strongest">I'm literally the strongest of all time.</button>
-                    <button class="B button" id="leading">Leading and teaching.</button>
-                    <button class="C button" id="unshakable">I have an unshakable character.</button>
-                    <button class="D button" id="adapting">Adapting quickly.</button>
-                </div>
-            </div>
-            <div class="question four">
-                <h4>Which Weapon do You Choose?</h4>
-                <img src="https://static1.dualshockersimages.com/wordpress/wp-content/uploads/wm/2023/08/maki-miguel-and-yuji-feature.jpg">
-                <div class="user-choices">
-                    <button class="A button" id="shikigami">Shikigami</button>
-                    <button class="B button" id="fists">My Fists</button>
-                    <button class="C button" id="hammer">Hammer and Nails</button>
-                    <button class="D button" id="blue-eyes">My Eyes</button>
-                </div>
-            </div>
+
+        <!-- Add a title and edit the opening of your story. -->
+        <div class="welcome-screen">
+            <h2 class="welcome">Welcome, </h2>
+            <h2 class="title"> In Wonderland</h2>
+            <img src="Pictures\Opening Image.avif" alt="Wonderland">
         </div>
-        <div class="result">
-            <div class="card megumi" style="width:400px">
-                <div class="card-body">
-                  <h4 class="card-title">Megumi Fushiguro</h4>
-                  <img class="card-img-top" src="https://staticg.sportskeeda.com/editor/2023/01/762f8-16749183314893-1920.jpg" alt="Card image">
-                </div>
-            </div> 
-            <div class="card gojo" style="width:400px">
-                <div class="card-body">
-                  <h4 class="card-title">Satoru Gojo</h4>
-                  <img class="card-img-top" src="https://fictionhorizon.com/wp-content/uploads/2023/09/GojoX-768x432.jpg" alt="Card image">
-                </div>
-            </div>  
-            <div class="card yuji" style="width:400px">
-                <div class="card-body">
-                  <h4 class="card-title">Itadori Yuji</h4>
-                  <img class="card-img-top" src="https://i.pinimg.com/originals/c3/62/1b/c3621b689d1af902ab1a95e46b907b29.png" alt="Card image">
-                </div>
-            </div>  
-            <div class="card nobara" style="width:400px">
-                <div class="card-body">
-                  <h4 class="card-title">Nobara Kugisaki</h4>
-                  <img class="card-img-top" src="https://wallpapercave.com/wp/wp8959702.png" alt="Card image">
-                </div>
-            </div>    
+        
+        <div class="story-opening">
+            <p class="opening-one">It's a warm summer day and you're reading over your sister's shoulder.</p>
+            <img src="Pictures\Late White Rabbit.webp" alt="Late White Rabbit">
+            <p class="opening-two">Out of the corner of your eye, you see a White Rabbit in a waistcoat running. The White Rabbit pulls out a pocket watch, exclaims that he is late, and pops down a rabbit hole. </p>
+        </div>
+
+        <div class="white-rabbit-buttons">
+            <h4>Do you want to follow the White Rabbit?</h4>
+            <button class="option-one">Yes</button>
+            <button class="option-two">No</button>
+        </div>
+
+        <!-- Change the text of the buttons to the options relevant to your story. -->
+
+        <!-- Put the part of the story the user will see if they picked option one. -->
+        <div class="option-one-screen">
+            <h1 class="option-one-open">Click on the hole to follow the rabbit.</h1>
+            <img src="Pictures/hole.jpg" alt="Rabbit Hole">
+        </div>
+
+        <!-- Put the part of the story the user will see if they picked option two. -->
+        <div class="option-two-screen">
+            <h1 class="option-two-start">Oh no! You get sucked in the rabbit hole anyway! <!--sad face--></h1>
+        </div>
+
+        <div class="falling-down-hole">
+            <img src="Pictures/Falling.gif" alt="Alice falling down">
+        </div>
+
+        <div class="hallway-option-screen">
+            <img src="Pictures/Doors.jpg" alt="Hallway with doors">
+            <p class="hallway">You come upon a hallway lined with doors and see a table in the distance</p>
+            <h1>Click on the table</h1>
+        </div>
+
+        <div class="table-with-keys">
+            <img src="Pictures/Keys.avif" alt="Two keys">
+            <p>You find two keys on the table. Which doors do they open?</p>
+        </div>
+
+        <div class="key-buttons">
+            <h4>Choose a key</h4>
+            <button class="key-one">Key 1</button>
+            <button class="key-two">Key 2</button>
+        </div>
+
+        <div class="key-one-screen">
+            <p class="key-one-screen-starter">You find the right door and unlock it with the key.</p>
+            <p class="queen-of-hearts">You open the door and find yourself in the Queen of Hearts' croquet ground.</p>
+            <img src="Pictures/Queen of Hearts.jpg" alt="Queen of Hearts">
+            <p class="tarts-thief">She accuses you of stealing her tarts and orders you to stand trial.</p>
+            <button class="plead-case">Plead your case!</button>
+        </div>
+
+        <div class="key-two-screen">
+            <p class="key-two-screen-starter">You find the right door and unlock it with the key.</p>
+            <p class="tea-party">You find yourself in front of the March Hare's house. He's having tea with the Mad Hatter, and the Dormouse. They treat your rudely and you stand by the tea party, uninvited.</p>
+            <img src="Pictures/Tea Party.jpeg" alt="Mad Tea Party">
+            <p class="time-loop">Oh no! You learn that they have wronged Time and are trapped in perpetual tea-time.</p>
+            <button class="forest-journey">Leave the tea party</button>
+        </div>
+        <!--Put the end of the story if the user chose option 1.-->
+        <div class="key-one-end">
+            <p>You try to plead your case but this only makes her more furious and she orders your beheading! As the guard approaches you, you grow to a huge size and knock over the Queen’s army of playing cards.</p>
+            <img src="Pictures/Trial.jpg" alt="Alice on trial">
+        </div>
+
+        <!-- Put the end of the story if the user chose option 2.-->
+        <div class="key-two-end">
+            <p>You leave and journey through the forest. You find a tree with a door in its side, and travel through it.</p>
+            <img src="Pictures/Door to Reality.jpg" alt="Door to Reality">
+        </div>
+        <div class="final-ending">
+            <p>You wake up and realize...</p>
+            <h1>It was all a dream!</h1>
+            <img src="Pictures/Dream.jpg" alt="Alice Waking up">
         </div>
     </body>
 </html>

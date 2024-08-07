@@ -1,13 +1,13 @@
-# INT: Unit 4 Project Starter Code
+# INT: Unit 3 Project Starter Code
 
-You will use this starter code to help you plan your Unit 4 project. 
+You will use this starter code to help you plan your Unit 3 project. 
 
 This starter code is meant to help you get started - feel free to change ANYTHING about the style or structure of this starter code to make it your own 💪
 
 ## Setup
 
 1. Fork this repo and import your copy into Replit.
-2. Go to the `<title>` tag and change it to your name and "Unit 4 Project" (For instance if your name is Janice, the title should be "Janice_Unit 4 Project")
+2. Go to the `<title>` tag and change it to your name and "Unit 3 Project" (For instance if your name is Janice, the title should be "Janice_Unit 3 Project")
 
 ## Project Task List
 
@@ -18,28 +18,20 @@ This starter code is meant to help you get started - feel free to change ANYTHIN
 - [ ] Choose a “Next Level Feature”.
 
 ### HTML
-Add HTML elements for your quiz page to promote user interaction:
-- [ ] Input Tags
-- [ ] Button Tag
-
-Adjust the HTML to match your theme:
-- [ ] Title for your quiz
-- [ ] Questions for the user
-- [ ] Modify images to match theme
-
+Adjust the HTML to match your story. HTML elements to use on your page could include:
+- [ ] Headings
+- [ ] Paragraphs
+- [ ] Images
 
 ### CSS
-- [ ] Change the background color to reflect the theme
-- [ ] Change the font to reflect the theme
-
+- [ ] Use the the display property in CSS to hide all but the first part of the game when the user enters. 
+- [ ] Add two other styling elements you like (background color, color, font, etc.)
 
 ### JS
-Use JS to account for user interaction:
-- [ ] Variables to store user input
-- [ ] The .value method
-- [ ] String concatenation
-- [ ] Basic conditional statements
-- [ ] Compound conditional statements that uses input from questions to provide the user with a result.
+- [ ] Save HTML elements using the  querySelector() method.
+- [ ] Use .style to change the CSS display property when the user interacts with the page.
+- [ ] Use .innerHTML to change the text when the user interacts with the page. 
+- [ ] Includes at least two events.
 
 ### Check Accessibility
 Check that the text is readable:
